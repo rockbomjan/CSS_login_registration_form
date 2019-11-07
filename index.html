@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log in</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="demo">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+<!-- when a register button is clicked, background image should move from left to fa-pull-right
+and the form should move from right to left side, so the onclick events
+are added, write javascript for the events -->
+                <button type='button' class='toggle-btn' onclick = "login()">Log In</button>
+                <button type='button' class='toggle-btn'onclick = "register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <img src="images/fb.png" alt="">
+                <img src="images/twitter.png" alt="">
+                <img src="images/google.png" alt="">
+            </div>
+            <form id = "login" class="input-group">
+                <input type="text" class="input-field" placeholder="User ID Required">
+                <input type="text" class="input-field" placeholder="Enter Password">
+                <input type="checkbox" class="check-box">
+                <span>Remember Password</span>
+            <button type = "submit" class = "submit-btn">Log in</button>
+            </form>
+            <form id = "register" class="input-group">
+                    <input type="text" class="input-field" placeholder="User ID Required">
+                    <input type="email" class="input-field" placeholder="Email ID Required">
+                    <input type="text" class="input-field" placeholder="Enter Password">
+                    <input type="checkbox" class="check-box">
+                    <span>I agree to the terms & conditions</span>
+                <button type = "submit" class = "submit-btn">Register</button>
+                </form>
+        </div>
+
+    </div>
+    <script>
+    var x = document.getElementById('login');
+    var y = document.getElementById('register');
+    var z = document.getElementById('btn');
+    /* when we click on register button, the background moves from left to right
+    and form moves from right to left*/
+    function register(){
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+    }
+     /* when we click on login button, the background moves from right to left
+    and form moves from left to right*/
+    function login(){
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+    }
+
+    </script>
+</body>
+
+</html>
